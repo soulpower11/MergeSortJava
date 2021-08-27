@@ -91,7 +91,7 @@ class MergeInsertionSort {
 
 	public static int[] mergeSortWithInsertion(int[] list) {
 		int len = list.length;
-		if (len < S) {
+		if (len <= S) {
 			// Length is smaller than the threshold, call insertionSort() function instead
 			return list = insertionSort(list);
 		} else {
