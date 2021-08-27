@@ -3,7 +3,6 @@
 // google "java api spec" to view available classes in JDK
 // Scanner class is most commonly used class to get console input and others..(check API Spec)
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Scanner;
 
 class MergeInsertionSort {
@@ -118,39 +117,32 @@ class MergeInsertionSort {
 	// entry into a Java program - in 'C' is int main()
 	public static void main(String args[]) {
 
-		// Scanner sc = new Scanner(System.in);
+		 Scanner sc = new Scanner(System.in);
 
-		// System.out.printf("Enter the size of the list you want to sort: ");
-		// int size = sc.nextInt();
+		 System.out.printf("Enter the size of the list you want to sort: ");
+		 int size = sc.nextInt();
 
-		// int list[] = new int[size];
+		 int list[] = new int[size];
 
-		// for (int i = 0; i < size; i++) {
-		// System.out.printf("Enter the element at Index " + i + ": ");
-		// int input = sc.nextInt();
-		// list[i] = input;
-		// }
+		 for (int i = 0; i < size; i++) {
+		 System.out.printf("Enter the element at Index " + i + ": ");
+		 int input = sc.nextInt();
+		 list[i] = input;
+		}
 
 		long start = System.currentTimeMillis();
-		
-		// int list[] = { 12, 11, 13, 5, 6, 10, 8, 7, 2, 15, 14, 1, 3, 4, 9, 16 };
 
-		int list[] = { 5, 2, 10, 15, 3, 8, 50, 62, 54, 23, 87, 56, 32, 14, 74, 69, 52, 51, 36, 59, 55, 59, 1, 3, 4, 8,
-				6, 10, 60, 90, 88, 84, 86, 95, 320, 54, 896, 78, 45, 32, 0, 5, 3, 8, 4, 9, 10 };
 		System.out.println(Arrays.toString(list));
 
 		int sorted[];
+		
+		sorted = mergeSort(list);
+		System.out.println(Arrays.toString(sorted));
+		System.out.println("Merge Sort");
+		System.out.println("Number of Key Comparison: " + keyComparison);
+		System.out.println("Size of Array: " + list.length);
 
-		// sorted = insertionSort(list);
-		// System.out.println(Arrays.toString(sorted));
-
-		// sorted = mergeSort(list);
-		// System.out.println(Arrays.toString(sorted));
-		// System.out.println("Merge Sort");
-		// System.out.println("Number of Key Comparison: " + keyComparison);
-		// System.out.println("Size of Array: " + list.length);
-
-		// keyComparison = 0;
+		keyComparison = 0;
 
 		sorted = mergeSortWithInsertion(list);
 		System.out.println(Arrays.toString(sorted));
