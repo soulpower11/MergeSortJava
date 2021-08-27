@@ -1,13 +1,9 @@
-
-// import java library classes
-// google "java api spec" to view available classes in JDK
-// Scanner class is most commonly used class to get console input and others..(check API Spec)
 import java.util.Arrays;
 import java.util.Scanner;
 
 class MergeInsertionSort {
 
-	private static final int S = 12;
+	private static final int S = 12; //THERSHOLD
 	private static int keyComparison;
 
 	public static int[] insertionSort(int[] list) {
